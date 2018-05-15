@@ -1,0 +1,13 @@
+<script>
+    $(document).ready(function(){
+        $.get({
+            url: "../classes/descriptions/descriptions.json",
+            success: function(data, status){
+                document.getElementById("description").innerHTML = data[1];
+            }
+        });
+    });
+</script>
+<div id="description">
+
+</div>
