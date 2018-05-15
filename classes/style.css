@@ -32,8 +32,22 @@ body {
     width: 10vw;
     height: 5vw;
 }
+.header-left {
+    float: left;
+    width: 50%;
+}
 .header-right {
     float: right;
+    width: 50%;
+}
+.contact {
+    float: right;
+    padding-right: 10px;
+}
+.sign-in-out {
+    float: right;
+    padding-right: 10px;
+    padding-top: 10px;
 }
 .breadcrumb-nav {
 	 border-top: 4px solid;
