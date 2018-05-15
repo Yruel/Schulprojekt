@@ -1,0 +1,18 @@
+body {
+	margin: 0;
+}
+#center {
+	margin: 0;
+	text-align: center;
+}
+#bla {
+	color: green;
+	font-size: 80px;
+	text-align: center;
+}
+.header {
+	background-color: red;
+	width: 10em;
+	height: 10em;
+	float: right;
+}
