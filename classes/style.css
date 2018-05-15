@@ -48,6 +48,20 @@ body {
     float: right;
     padding-right: 10px;
     padding-top: 10px;
+    position: relative;
+    display: inline-block;
+}
+.sign-in-content {
+    display: block;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 2;
+}
+.sign-in-out:hover .sign-in-content {
+    display: inline-block;
 }
 .breadcrumb-nav {
 	 border-top: 4px solid;
