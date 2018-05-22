@@ -34,3 +34,26 @@ body {
 #products {
     margin-top: 5%;
 }
+#productContent {
+    text-align: left;
+    padding: 2em;
+}
+#productContent h3 {
+    margin-top: 3%;
+}
+#productImage {
+    height: 300px;
+    display: inline-block;
+    margin-right: 20%;
+}
+#productPrice {
+    display: inline-block;
+}
+#productDescription h1 {
+    font-weight: 100;
+    font-size: 2em;
+}
+#productDescription h2 {
+    font-weight: 100;
+    font-size: 1.5em;
+}
