@@ -21,30 +21,22 @@ switch($action) {
 		$tpl->parse("content", "home");
 		break;
 		
-	case "arsch":
-		$tpl->setBlock("scheisse", "content");
-		$tpl->setVar("variable", "Hurensohn!");
-		
-		
-		$tpl->parse("content", "scheisse");
-		break;
-
 	case "products":
 		$tpl->setBlock("products", "content");
 		$tpl->parse("content", "products");
 
 		$category = $_GET["category"];
 
-		$conn = new PDO("mysql:dbname=schulprojekt; host=127.0.0.1", "root", "");
-		$query = "SELECT * FROM schulprojekt.products WHERE category = :category";
-		$stmt = $conn->prepare($query);
-		$stmt->bindParam(":category", $category);
-		$stmt->execute();
-		$result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+		//$conn = new PDO("mysql:dbname=schulprojekt; host=127.0.0.1", "root", "");
+		//$query = "SELECT * FROM schulprojekt.products WHERE category = :category";
+		//$stmt = $conn->prepare($query);
+		//$stmt->bindParam(":category", $category);
+		//$stmt->execute();
+		//$result = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-		$resultjson = json_encode($result);
+		//$resultjson = json_encode($result);
 
-		$tpl->setVar("test", $resultjson);
+		//$tpl->setVar("test", $resultjson);
 		$tpl->setVar("category", $category);
 		break;
 }

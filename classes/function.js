@@ -12,3 +12,17 @@ function myFunction() {
         x.className = "topnav";
     }
 }
+
+function getTest() {
+    $.ajax({
+		type : "GET",
+		url : "api.php?action=products&category=sound",
+		async : false,
+		dataType : 'json',
+		success : function(result) {
+			if (result != null) {
+                console.log(result);
+            }
+		}
+	});
+}
