@@ -5,6 +5,7 @@ $tpl = new HTML_Template_PHPLIB('templates', 'keep');
 $tpl->setFile(array(
 		"main" => 'main.tpl.html',
 		"home" => 'home.tpl.html',
+		"nav" => 'nav.tpl.html',
 		"scheisse" => 'bla.tpl.html',
 		"products" => 'products.tpl.html'
 ));
@@ -12,20 +13,28 @@ $tpl->setFile(array(
 if (! empty ( $_GET ["request"] )) {
 	$action = $_GET ["request"];
 } else {
-	$action = "home";
+	$action = "products";
 }
 
 switch($action) {
 	case "home":
 		$tpl->setBlock("home", "content");
+		$tpl->setBlock("nav", "nav");
+		$tpl->parse("nav", "nav");
 		$tpl->parse("content", "home");
 		break;
 		
 	case "products":
 		$tpl->setBlock("products", "content");
+		$tpl->setBlock("nav", "nav");
+		$tpl->parse("nav", "nav");
 		$tpl->parse("content", "products");
 
-		$category = $_GET["category"];
+		if (!empty ($_GET["category"])) {
+			$category = $_GET["category"];
+		} else {
+			$category = "sound";
+		}
 
 		//$conn = new PDO("mysql:dbname=schulprojekt; host=127.0.0.1", "root", "");
 		//$query = "SELECT * FROM schulprojekt.products WHERE category = :category";

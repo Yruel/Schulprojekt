@@ -8,7 +8,7 @@ $(document).ready(function (){
             for(var i = 0; i < result.length; i++){
                 div.innerHTML +=
                     "<div onclick='loadProduct();' class='product'>" +
-                        "<img src='../img/products/"+result[i].ID+".png'>" +
+                        "<img src='img/products/"+result[i].ID+".png'>" +
                         "<p>"+result[i].name+"</p>" +
                     "</div>";
             }

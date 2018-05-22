@@ -19,48 +19,12 @@
       <div class="header-right">
         <div class="contact">
           <p>Tel.: 0151 22046000 | Kontakt</p>
-          <p onclick="ShowLogin()"><i class="fas fa-user"></i>Anmeldung</i></p>
         </div>
       </div>
     </div>
-    <div class="breadcrumb-nav">
-        <div class="navbar-head">
-            <div class="dropdown-navbar">
-              <button class="dropbtn-navbar">Dropdown 
-                <i class="fa fa-caret-down"></i>
-              </button>
-              <div class="dropdown-content-nav">
-                <a href="index.php?request=products&category=sound">Sound</a>
-                <a href="index.php?request=products&category=licht">Licht</a>
-                <a href="index.php?request=products&category=wärme">Wärme</a>
-                <a href="index.php?request=products&category=gadgets">Gadgets</a>
-              </div>
-            </div>
-            <a href="index.php?request=impressum">Impressum</a>
-            <a href="index.php?request=aboutUs">Über Uns</a>
-          </div>
-    </div>
-    <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Login</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <input type="text" placeholder="Benutzernamen"/>
-                    <input type="password" placeholder="Passwort"/>
-                </div>
-                <div class="modal-footer">
-                  <p>Neu hier? <a style="color: red;" onclick="ShowRegister()">Jetzt Registrieren!</a></p>
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Login</button>
-                </div>
-            </div>
-        </div>
-    </div>
+   
+    {nav}
+    
 </header>
 
 {content}

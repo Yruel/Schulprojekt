@@ -142,3 +142,27 @@ body {
 .dropdown-navbar:hover .dropdown-content-nav {
     display: block;
 }
+
+/*LOGIN*/ 
+
+.login-container {
+    width: 30%;
+    height: 20em;
+    background-color: red;
+}
+.login-input {
+    margin-top: 20px;
+    width: 50% !important;
+    margin-left: 25%;
+}
+.btn-primary {
+    background-color: #1e4a76 !important;
+    margin-top: 20px !important;
+}
+
+/*Register*/
+
+#register-link {
+    color: red;
+    cursor: pointer;
+}
