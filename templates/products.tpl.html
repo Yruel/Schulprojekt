@@ -1,0 +1,41 @@
+<script>
+    $(document).ready(function (){
+        var products = {test};
+        var div = document.getElementById("products");
+        for(var i = 0; i < products.length; i++){
+            div.innerHTML += "<div class='product'><img src='../img/products/"+products[i]['ID']+".png'></br>"+products[i]['name']+"</div>";
+        }
+
+        document.getElementById("title").innerHTML = "{category}".toUpperCase();
+    })
+</script>
+<style>
+    body {
+        background-color: lightgrey;
+        text-align: center;
+    }
+    #content {
+        margin-top: 2%;
+        width: 70%;
+        margin-left: 15%;
+        background-color: white;
+    }
+    .product {
+        display: inline-block;
+        text-align: center;
+        width: 50%;
+        height: 200px;
+    }
+    .product img {
+        height: 200px;
+    }
+    #products {
+        margin-top: 5%;
+    }
+</style>
+<div id="content">
+    <h2 id="title"></h2>
+    <div id="products">
+
+    </div>
+</div>

@@ -22,43 +22,24 @@
           <p onclick="ShowLogin()"><i class="fas fa-user"></i>Anmeldung</i></p>
         </div>
       </div>
-			</div>
-			<div class="breadcrumb-nav">
-			
-    <div class="navbar_header">
-        <a href="#home">Über uns</a>
-        <a href="#news">Impressum</a>
-        <div class="dropdown_header">
-          <button class="dropbtn">Produkte
-            <i class="fa fa-caret-down"></i>
-          </button>
-          <div class="dropdown-content">
-            <div class="header">
-              <h2>Produkte</h2>
-            </div>   
-            <div class="rows">
-              <div class="column">
-                <h3>Licht</h3>
-                <a href="#">Link 1</a>
-                <a href="#">Link 2</a>
-                <a href="#">Link 3</a>
-              </div>
-              <div class="column">
-                <h3>Webcam</h3>
-                <a href="#">Link 1</a>
-                <a href="#">Link 2</a>
-                <a href="#">Link 3</a>
-              </div>
-              <div class="column">
-                <h3>Whatever</h3>
-                <a href="#">Link 1</a>
-                <a href="#">Link 2</a>
-                <a href="#">Link 3</a>
-              </div>
+    </div>
+    <div class="breadcrumb-nav">
+        <div class="navbar">
+            <a href="#home">Über uns</a>
+            <a href="#news">Impressum</a>
+            <div class="dropdown">
+                <button class="dropbtn">Produkte
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <h3>Wählen Sie eine Kategorie aus...</h3>
+                    <a href="http://127.0.0.1:9000?request=products&category=licht">Licht</a>
+                    <a href="http://127.0.0.1:9000?request=products&category=sound">Sound</a>
+                    <a href="http://127.0.0.1:9000?request=products&category=wärme">Wärme</a>
+                    <a href="http://127.0.0.1:9000?request=products&category=geräte">Geräte</a>
+                </div>
             </div>
-          </div>
-        </div> 
-      </div>
+        </div>
     </div>
     <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
