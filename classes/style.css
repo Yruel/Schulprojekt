@@ -67,15 +67,24 @@ body {
     border-top-color: black;
 }
 
-/* Navbar container */
-.navbar {
+
+/*navbar*/
+
+.navbar-head {
     overflow: hidden;
     background-color: #333;
-    font-family: Arial;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-/* Links inside the navbar */
-.navbar a {
+.navbar-head a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+.navbar-btn a {
     float: left;
     font-size: 16px;
     color: white;
@@ -84,31 +93,31 @@ body {
     text-decoration: none;
 }
 
-/* The dropdown container */
-.dropdown {
+.dropdown-navbar {
     float: left;
     overflow: hidden;
 }
 
-/* Dropdown button */
-.dropdown .dropbtn {
-    font-size: 16px;
+.dropdown-navbar .dropbtn-navbar {
+    font-size: 16px;    
     border: none;
     outline: none;
     color: white;
     padding: 14px 16px;
     background-color: inherit;
-    font-family: inherit; /* Important for vertical align on mobile phones */
-    margin: 0; /* Important for vertical align on mobile phones */
+    font-family: inherit;
+    margin: 0;
 }
 
-/* Add a red background color to navbar links on hover */
-.navbar a:hover, .dropdown:hover .dropbtn {
-    background-color: red;
+.navbar-head a:hover, .dropdown-navbar:hover .dropbtn-navbar {
+    background-color: #1e4a76;
+    text-decoration: none;
+    color: white;
 }
-
-/* Dropdown content (hidden by default) */
-.dropdown-content {
+.dropdown-content-nav a:hover {
+    color: #1e4a76;
+}
+.dropdown-content-nav {
     display: none;
     position: absolute;
     background-color: #f9f9f9;
@@ -117,8 +126,7 @@ body {
     z-index: 1;
 }
 
-/* Links inside the dropdown */
-.dropdown-content a {
+.dropdown-content-nav a {
     float: none;
     color: black;
     padding: 12px 16px;
@@ -127,50 +135,10 @@ body {
     text-align: left;
 }
 
-/* Add a grey background color to dropdown links on hover */
-.dropdown-content a:hover {
+.dropdown-content-nav a:hover {
     background-color: #ddd;
 }
 
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {
+.dropdown-navbar:hover .dropdown-content-nav {
     display: block;
-}
-
-
-/* Create three equal columns that floats next to each other */
-.column {
-    float: left;
-    width: 33.33%;
-    padding: 10px;
-    background-color: #ccc;
-    height: 250px;
-}
-
-.column a {
-    float: none;
-    color: black;
-    padding: 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-}
-
-.column a:hover {
-    background-color: #ddd;
-}
-
-/* Clear floats after the columns */
-.rows:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-    .column {
-        width: 100%;
-        height: auto;
-    }
 }

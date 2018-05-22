@@ -24,22 +24,21 @@
       </div>
     </div>
     <div class="breadcrumb-nav">
-        <div class="navbar">
-            <a href="#home">Über uns</a>
-            <a href="#news">Impressum</a>
-            <div class="dropdown">
-                <button class="dropbtn">Produkte
-                    <i class="fa fa-caret-down"></i>
-                </button>
-                <div class="dropdown-content">
-                    <h3>Wählen Sie eine Kategorie aus...</h3>
-                    <a href="http://127.0.0.1:9000?request=products&category=licht">Licht</a>
-                    <a href="http://127.0.0.1:9000?request=products&category=sound">Sound</a>
-                    <a href="http://127.0.0.1:9000?request=products&category=wärme">Wärme</a>
-                    <a href="http://127.0.0.1:9000?request=products&category=geräte">Geräte</a>
-                </div>
+        <div class="navbar-head">
+            <div class="dropdown-navbar">
+              <button class="dropbtn-navbar">Dropdown 
+                <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-content-nav">
+                <a href="index.php?request=products&category=sound">Sound</a>
+                <a href="index.php?request=products&category=licht">Licht</a>
+                <a href="index.php?request=products&category=wärme">Wärme</a>
+                <a href="index.php?request=products&category=gadgets">Gadgets</a>
+              </div>
             </div>
-        </div>
+            <a href="index.php?request=impressum">Impressum</a>
+            <a href="index.php?request=aboutUs">Über Uns</a>
+          </div>
     </div>
     <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
