@@ -5,11 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="240763e9-f8d3-4e80-9804-8a7bf817bf91" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/classes/css/products.css" beforeDir="false" afterPath="$PROJECT_DIR$/classes/css/products.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/descriptions/descriptions.json" beforeDir="false" afterPath="$PROJECT_DIR$/classes/descriptions/descriptions.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/config.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/products.tpl.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/products.tpl.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -32,20 +28,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file leaf-file-name="products.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="products.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/classes/css/products.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="57" column="19" selection-start-line="57" selection-start-column="19" selection-end-line="57" selection-end-column="19" />
+            <state relative-caret-position="18">
+              <caret line="1" column="51" selection-start-line="1" selection-start-column="51" selection-end-line="1" selection-end-column="51" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="test.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../test.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="54">
-              <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
+              <caret line="3" column="4" selection-start-line="3" selection-end-line="3" selection-end-column="824" />
             </state>
           </provider>
         </entry>
@@ -53,8 +49,8 @@
       <file leaf-file-name="descriptions.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/classes/descriptions/descriptions.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="8" column="4" lean-forward="true" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
+            <state relative-caret-position="162">
+              <caret line="9" column="4" lean-forward="true" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -96,10 +92,10 @@
         <option value="$PROJECT_DIR$/api.php" />
         <option value="$PROJECT_DIR$/config/config.php" />
         <option value="$PROJECT_DIR$/templates/products.tpl.html" />
-        <option value="$PROJECT_DIR$/classes/descriptions/descriptions.json" />
         <option value="$PROJECT_DIR$/classes/js/products.js" />
-        <option value="$PROJECT_DIR$/classes/css/products.css" />
         <option value="$PROJECT_DIR$/../test.html" />
+        <option value="$PROJECT_DIR$/classes/descriptions/descriptions.json" />
+        <option value="$PROJECT_DIR$/classes/css/products.css" />
       </list>
     </option>
   </component>
@@ -209,27 +205,27 @@
       <updated>1523950292023</updated>
       <workItem from="1523950293285" duration="378000" />
       <workItem from="1526369488774" duration="11653000" />
-      <workItem from="1527058529147" duration="1572000" />
+      <workItem from="1527058529147" duration="2070000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33379000" />
+    <option name="totallyTimeSpent" value="33877000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="-4" width="1217" height="1029" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22668947" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22668947" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50216216" side_tool="true" visible="true" weight="0.35005575" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.502994" side_tool="true" weight="0.35005575" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49783784" weight="0.35005975" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" sideWeight="0.497006" visible="true" weight="0.35005575" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -481,13 +477,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/classes/descriptions/descriptions.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="4" lean-forward="true" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/classes/js/products.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="157">
@@ -495,17 +484,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/classes/css/products.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="57" column="19" selection-start-line="57" selection-start-column="19" selection-end-line="57" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../test.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="54">
-          <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
+          <caret line="3" column="4" selection-start-line="3" selection-end-line="3" selection-end-column="824" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/classes/descriptions/descriptions.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" column="4" lean-forward="true" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/classes/css/products.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="1" column="51" selection-start-line="1" selection-start-column="51" selection-end-line="1" selection-end-column="51" />
         </state>
       </provider>
     </entry>
