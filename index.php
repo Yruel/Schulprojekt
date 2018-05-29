@@ -1,15 +1,42 @@
 <?php
+session_start();
 include("config/config.php");
 
 $tpl = new HTML_Template_PHPLIB('templates', 'keep');
 $tpl->setFile(array(
 		"main" => 'main.tpl.html',
-		"home" => 'home.tpl.html',
 		"nav" => 'nav.tpl.html',
-		"scheisse" => 'bla.tpl.html',
 		"products" => 'products.tpl.html'
 ));
+$tpl->setVar("error", null);
 
+if (!empty ($_POST["mail"]) || !empty ($_POST["password"])) {
+	$get_user = $_POST["mail"];
+	$get_pass = $_POST["password"];
+
+	
+	$log = checkLogin($get_user, $get_pass);
+
+	if ($log == null) {
+		$conn = new PDO("mysql:dbname=".DBNAME.";host=".DBHOST.";charset=utf8", DBUSER, DBPASS);
+
+		$query = "SELECT salutation, lastname from schulprojekt.user where mail = :mail";
+
+		$stmt = $conn->prepare($query);
+		$stmt->bindParam(":mail", $get_user);
+		$stmt->execute();
+		$result = $stmt->FetchAll(PDO::FETCH_ASSOC);
+
+		$salutation = $result[0]['salutation'];
+		$lastname = $result[0]['lastname'];
+
+		$_SESSION['login'] = $lastname;
+		
+		print_r($salutation . $_SESSION["login"]);
+	} else {
+		$tpl->setVar("error", $log);
+	}
+}
 if (! empty ( $_GET ["request"] )) {
 	$action = $_GET ["request"];
 } else {
