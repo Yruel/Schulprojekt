@@ -43,7 +43,7 @@ if (! empty ( $_GET ["request"] )) {
 	$action = "products";
 }
 
-$user = "Hallo";
+$user = null;
 $tpl->setVar("user", $user);
 
 switch($action) {

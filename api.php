@@ -5,7 +5,6 @@ $conn = new PDO("mysql:dbname=".DBNAME.";host=".DBHOST.";charset=utf8", DBUSER, 
 
     switch ($_GET["action"]) {
         case "products":
-            $sql = "select * from schulprojekt";
             $category = $_GET["category"];
 
             $query = "SELECT ID, name, brand FROM schulprojekt.products WHERE category = :category";
