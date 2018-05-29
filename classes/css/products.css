@@ -45,8 +45,9 @@ body {
     display: inline-block;
     margin-right: 20%;
 }
-#productPrice {
+#price {
     display: inline-block;
+    text-align: center;
 }
 #productDescription h1 {
     font-weight: 100;
@@ -55,4 +56,7 @@ body {
 #productDescription h2 {
     font-weight: 100;
     font-size: 1.25em;
+}
+#shop_image {
+    height: 16px;
 }

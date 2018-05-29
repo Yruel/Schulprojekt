@@ -43,6 +43,9 @@ if (! empty ( $_GET ["request"] )) {
 	$action = "products";
 }
 
+$user = "Hallo";
+$tpl->setVar("user", $user);
+
 switch($action) {
 	case "home":
 		$tpl->setBlock("home", "content");

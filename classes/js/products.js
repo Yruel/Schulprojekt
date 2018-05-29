@@ -1,7 +1,12 @@
 $(document).ready(function (){
+
     var div = document.getElementById("products");
+    var url_string = window.location.href;
+    var url = new URL(url_string);
+    var category = url.searchParams.get("category");
+
     $.ajax({
-        url : "api.php?action=products&category=sound",
+        url : "api.php?action=products&category="+category,
         dataType: 'json',
         success : function(result) {
             for(var i = 0; i < result.length; i++){
@@ -29,6 +34,7 @@ function loadProduct(value) {
                     document.getElementById("productDescription").innerHTML = data[result.ID];
                 }
             });
+            document.getElementById("shop_button").setAttribute("value", value);
         }
     });
 }

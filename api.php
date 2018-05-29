@@ -3,7 +3,6 @@ session_start();
 include_once("config/config.php");
 $conn = new PDO("mysql:dbname=".DBNAME.";host=".DBHOST.";charset=utf8", DBUSER, DBPASS);
 
-
     switch ($_GET["action"]) {
         case "products":
             $sql = "select * from schulprojekt";
@@ -14,7 +13,7 @@ $conn = new PDO("mysql:dbname=".DBNAME.";host=".DBHOST.";charset=utf8", DBUSER, 
             $stmt->bindParam(":category", $category);
             $stmt->execute();
             $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
-    
+
             echo json_encode($result);
             break;
         case "product":

@@ -6,15 +6,14 @@
             </button>
             <div class="dropdown-content-nav">
                 <a href="index.php?request=products&category=sound">Sound</a>
-                <a href="index.php?request=products&category=licht">Licht</a>
-                <a href="index.php?request=products&category=wärme">Wärme</a>
-                <a href="index.php?request=products&category=gadgets">Gadgets</a>
+                <a href="index.php?request=products&category=light">Light</a>
+                <a href="index.php?request=products&category=ambience">Ambience</a>
               </div>
         </div>
         <a href="index.php?request=impressum">Impressum</a>
         <a href="index.php?request=aboutUs">Über Uns</a>
-        <div class="dropdown-navbar" onclick="document.getElementById('login').style.display = block" style="float: right;">
-           <button class="dropbtn-navbar">Anmelden
+        <div id="sign_in" class="dropdown-navbar" onclick="document.getElementById('login').style.display = block" style="float: right;">
+            <button class="dropbtn-navbar">Anmelden
                 <i class="fa fa-caret-down"></i>
             </button>
             <div class="dropdown-content-nav" id="login" style="right: 0; width: 25%; height: 45%;">
@@ -27,6 +26,8 @@
                 Neu hier? <i id="register-link" onclick="showRegister()">Jetzt Registrieren!</i>
             </div>
         </div>
+        {user}
+        <a href="#" style="float: right; display: none"><i class="fas fa-shopping-cart"></i>&ensp;Warenkorb</a>
     </div>
 </div>
 <script src="classes/js/register.js"></script>
@@ -63,11 +64,19 @@
     function showRegister() {
         $("#register-modal").modal("toggle");
     }
-    $(document).ready(function() {
+    $(document).ready(function () {
+        var user = "{user}";
+        if(user){
+            document.getElementById("sign_in").style.display = "none";
+        }
+        else {
+            console.log("no");
+        }
+
         var error = '{error}';
 
         if (error) {
             swal(error, "", "error");
         }
-    });
+    })
 </script>
