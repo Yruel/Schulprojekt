@@ -35,17 +35,6 @@ switch($action) {
 		} else {
 			$category = "sound";
 		}
-
-		//$conn = new PDO("mysql:dbname=schulprojekt; host=127.0.0.1", "root", "");
-		//$query = "SELECT * FROM schulprojekt.products WHERE category = :category";
-		//$stmt = $conn->prepare($query);
-		//$stmt->bindParam(":category", $category);
-		//$stmt->execute();
-		//$result = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
-		//$resultjson = json_encode($result);
-
-		//$tpl->setVar("test", $resultjson);
 		$tpl->setVar("category", $category);
 		break;
 }
