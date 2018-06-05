@@ -110,7 +110,6 @@ switch($action) {
 		$tpl->parse("nav", "nav");
 		break;
 }
-
 $tpl->parse('out','main');
 $tpl->p('out');
 ?>
