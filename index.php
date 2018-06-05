@@ -22,7 +22,7 @@ if (!empty ($_POST["mail"]) || !empty ($_POST["password"])) {
 	if ($log == null) {
 		$conn = new PDO("mysql:dbname=".DBNAME.";host=".DBHOST.";charset=utf8", DBUSER, DBPASS);
 
-		$query = "SELECT salutation, lastname from schulprojekt.user where mail = :mail";
+		$query = "SELECT ID, salutation, lastname from schulprojekt.user where mail = :mail";
 
 		$stmt = $conn->prepare($query);
 		$stmt->bindParam(":mail", $get_user);
@@ -31,9 +31,11 @@ if (!empty ($_POST["mail"]) || !empty ($_POST["password"])) {
 
 		$salutation = $result[0]['salutation'];
 		$lastname = $result[0]['lastname'];
+		$id = $result[0]['ID'];
 
 		$_SESSION['login']['lastname'] = $lastname;
 		$_SESSION['login']['salutation'] = $salutation;
+		$_SESSION['login']['ID'] = $id;
 
 	} else {
 		$tpl->setVar("error", $log);
@@ -98,6 +100,9 @@ switch($action) {
         $tpl->setBlock("nav", "nav");
         $tpl->parse("nav", "nav");
         $tpl->parse("content", "buy");
+
+        $shopping_cart = $_SESSION['shopping_cart'];
+        $tpl->setVar("shoppingcart", json_encode($shopping_cart, JSON_FORCE_OBJECT));
         break;
 
 	case "logout":

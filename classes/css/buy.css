@@ -6,10 +6,67 @@ body {
     width: 70%;
     margin-left: 15%;
     background-color: white;
-    padding: 2em;
+    padding: 2em 20em;
 }
 h2 {
     font-weight: 100;
     font-size: 2.5em;
     text-transform: uppercase;
+}
+h3 {
+    font-weight: 100;
+    font-size: 2em;
+}
+h4 {
+    font-weight: 100;
+    font-size: 1.5em;
+}
+#formular {
+    margin-top: 2em;
+}
+#gender {
+    margin-top: 1em;
+    display: inline-block;
+    width: 14%;
+}
+#vorname {
+    margin-top: 1em;
+    display: inline-block;
+    width: 42%;
+}
+#nachname {
+    margin-top: 1em;
+    display: inline-block;
+    width: 42%;
+}
+#housenumber {
+    display: inline-block;
+    margin-top: 1em;
+    width: 20%;
+}
+#straße {
+    display: inline-block;
+    margin-top: 1em;
+    width: 78%;
+}
+#plz {
+    display: inline-block;
+    margin-top: 1em;
+    width: 20%;
+}
+#home {
+    display: inline-block;
+    margin-top: 1em;
+    width: 78%;
+}
+#email {
+    display: inline-block;
+    margin-top: 1em;
+    width: 99%
+}
+#prices {
+    display: flex;
+    justify-content: space-between;
+    width: 99%;
+    padding: 2em;
 }

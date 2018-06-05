@@ -64,5 +64,15 @@ $conn = new PDO("mysql:dbname=".DBNAME.";host=".DBHOST.";charset=utf8", DBUSER, 
             $productid = $_GET["productid"];
             unset($_SESSION["shopping_cart"][array_search($productid, $_SESSION["shopping_cart"])]);
             break;
+
+        case "customer":
+            $id = $_SESSION['login']['ID'];
+            $query = "SELECT * FROM schulprojekt.user WHERE ID = :id";
+            $stmt = $conn->prepare($query);
+            $stmt->bindParam(":id", $id);
+            $stmt->execute();
+
+            $result = json_encode($stmt->fetchAll(PDO::FETCH_ASSOC)[0]);
+            echo $result;
     }
 ?>
