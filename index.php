@@ -111,20 +111,11 @@ switch($action) {
 //     $get_user = strtolower($_POST['username']);
 //     $get_pass = $_POST['password'];
 
-//     $res = getNdsEntries( "cn", $get_user );
-//     $log = checkADSUser( $get_user, $get_pass );
-
-//     if ($log == "ok") {
-//         $_SESSION ["login"] = $get_user;
-//         header ( "location: index.php" );
-//     } else {
-//         $tpl->setVar("errorLogin", $log);
-//         $tpl->setVar("button","");
-//         $tpl->setVar("nav","");
-//         $tpl->setBlock("login", "content");
-//         $tpl->parse("content", "login");
-//     }
-// }
+	case "impressum":
+		$tpl->setBlock("nav", "nav");
+		$tpl->parse("nav", "nav");
+		break;
+}
 
 $tpl->parse('out','main');
 $tpl->p('out');
