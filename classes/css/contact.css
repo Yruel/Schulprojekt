@@ -1,0 +1,32 @@
+body {
+    background-image: linear-gradient( darkgrey, lightgrey, darkgrey);
+    text-align: center;
+}
+#content {
+    width: 70%;
+    margin-left: 15%;
+    background-color: white;
+    padding: 2em 10em;
+}
+h2 {
+    font-weight: 100;
+    font-size: 2.5em;
+    text-transform: uppercase;
+}
+h3 {
+    font-weight: 100;
+    font-size: 1.75em;
+}
+#content_inner {
+    margin-top: 5%;
+    text-align: left;
+}
+#google {
+    border: 1px solid lightgrey;
+    width: 70%;
+    padding: 0.5em;
+    border-radius: 5px;
+}
+#iframe {
+    width: 100%;
+}
