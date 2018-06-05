@@ -104,12 +104,6 @@ switch($action) {
 		session_destroy();
 		echo "<script>window.location.replace('index.php')</script>";
 		break;
-}
-
-// }
-// else if (!empty($_POST['username']) && !empty($_POST['password'])) {
-//     $get_user = strtolower($_POST['username']);
-//     $get_pass = $_POST['password'];
 
 	case "impressum":
 		$tpl->setBlock("nav", "nav");
