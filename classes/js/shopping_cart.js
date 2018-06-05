@@ -6,3 +6,11 @@ function shopping_delete(id) {
         }
     })
 }
+function replace() {
+    if(document.getElementById('summe').innerText != "0"){
+        window.location.replace('index.php?request=buy')
+    }
+    else {
+        swal("Bitte wählen Sie ein Produkt aus", "", "info");
+    }
+}

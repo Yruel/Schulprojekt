@@ -70,3 +70,6 @@ h4 {
     width: 99%;
     padding: 2em;
 }
+.swal-modal {
+    width: 850px !important;
+}

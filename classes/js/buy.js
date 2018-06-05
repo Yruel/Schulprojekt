@@ -14,7 +14,3 @@ function userdata(){
     });
 }
 
-$('#buy').on("submit", function (e) {
-   swal("Hallo");
-});
-

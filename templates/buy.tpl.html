@@ -29,6 +29,15 @@
 <script>
     $(document).ready(function () {
         userdata();
+        $('#buy').on("submit", function (e) {
+            e.preventDefault();
+            e.validate;
+            swal({
+                title: "Herzlichen Glückwunsch",
+                text: "Ihre Bestellung ist erfolgreich eingegangen und ihre Produkte werden morgen von einem Mitarbeiter geliefert.",
+                icon: "success"
+            });
+        });
 
         var shopping_cart = JSON.parse('{shoppingcart}');
         var sum = 0.00;

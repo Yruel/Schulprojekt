@@ -8,7 +8,8 @@ $tpl->setFile(array(
 		"nav" => 'nav.tpl.html',
 		"products" => 'products.tpl.html',
 		"shoppingCart" => 'shoppingCart.tpl.html',
-		"buy" => 'buy.tpl.html'
+		"buy" => 'buy.tpl.html',
+		"impressum" => 'impressum.tpl.html'
 ));
 $tpl->setVar("error", null);
 
@@ -111,8 +112,10 @@ switch($action) {
 		break;
 
 	case "impressum":
-		$tpl->setBlock("nav", "nav");
-		$tpl->parse("nav", "nav");
+        $tpl->setBlock("impressum", "content");
+        $tpl->setBlock("nav", "nav");
+        $tpl->parse("nav", "nav");
+        $tpl->parse("content", "impressum");
 		break;
 
 	case "aboutUs":
