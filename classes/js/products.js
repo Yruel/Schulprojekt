@@ -42,3 +42,18 @@ function loadProduct(value) {
         }
     });
 }
+
+function shopping(id) {
+    console.log(id);
+    $.ajax({
+        url : "api.php?action=shopping&productid="+id,
+        success : function(result) {
+            swal("Artikel erfolgreich hinzugefügt", "", "success");
+        },
+        statusCode: {
+            403: function () {
+                swal("Bitte melden Sie sich an oder registrieren Sie sich", "", "error")
+            }
+        }
+    });
+}

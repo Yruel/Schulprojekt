@@ -6,7 +6,9 @@ $tpl = new HTML_Template_PHPLIB('templates', 'keep');
 $tpl->setFile(array(
 		"main" => 'main.tpl.html',
 		"nav" => 'nav.tpl.html',
-		"products" => 'products.tpl.html'
+		"products" => 'products.tpl.html',
+		"shoppingCart" => 'shoppingCart.tpl.html',
+		"buy" => 'buy.tpl.html'
 ));
 $tpl->setVar("error", null);
 
@@ -30,9 +32,9 @@ if (!empty ($_POST["mail"]) || !empty ($_POST["password"])) {
 		$salutation = $result[0]['salutation'];
 		$lastname = $result[0]['lastname'];
 
-		$_SESSION['login'] = $lastname;
-		
-		print_r($salutation . $_SESSION["login"]);
+		$_SESSION['login']['lastname'] = $lastname;
+		$_SESSION['login']['salutation'] = $salutation;
+
 	} else {
 		$tpl->setVar("error", $log);
 	}
@@ -43,8 +45,20 @@ if (! empty ( $_GET ["request"] )) {
 	$action = "products";
 }
 
-$user = null;
+if (isset($_SESSION['login'])){
+	$user = $_SESSION['login']['lastname'];
+	$salutation = $_SESSION['login']['salutation'];
+}
+else {
+	$user = null;
+	$salutation = null;
+}
+if(!isset($_SESSION["shopping_cart"])){
+	$_SESSION["shopping_cart"] = [];
+}
+
 $tpl->setVar("user", $user);
+$tpl->setVar("salutation", $salutation);
 
 switch($action) {
 	case "home":
@@ -66,6 +80,29 @@ switch($action) {
 			$category = "sound";
 		}
 		$tpl->setVar("category", $category);
+		break;
+
+	case "shopping_cart":
+        $tpl->setBlock("shoppingCart", "content");
+        $tpl->setBlock("nav", "nav");
+        $tpl->parse("nav", "nav");
+        $tpl->parse("content", "shoppingCart");
+
+        $shopping_cart = $_SESSION['shopping_cart'];
+
+        $tpl->setVar("shoppingcart", json_encode($shopping_cart, JSON_FORCE_OBJECT));
+        break;
+
+	case "buy":
+        $tpl->setBlock("buy", "content");
+        $tpl->setBlock("nav", "nav");
+        $tpl->parse("nav", "nav");
+        $tpl->parse("content", "buy");
+        break;
+
+	case "logout":
+		session_destroy();
+		echo "<script>window.location.replace('index.php')</script>";
 		break;
 }
 

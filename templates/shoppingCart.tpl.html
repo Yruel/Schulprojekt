@@ -1,0 +1,57 @@
+<link rel="stylesheet" type="text/css" href="classes/css/shopping_cart.css">
+<script type="text/javascript" src="classes/js/shopping_cart.js"></script>
+<div id="content">
+    <h2>Ihr Warenkorb</h2>
+    <div id="wrapper">
+        <div id="products"></div>
+        <div id="sum">
+            <div id="prices"></div>
+            <div id="price_sum">
+                <hr>
+                <p style="display: inline-block" id="summe">0</p>
+                <p style="display: inline-block">€</p>
+            </div>
+            <button onclick="window.location.replace('index.php?request=buy')" class="btn">Jetzt kaufen&ensp;<i class="far fa-money-bill-alt"></i></button>
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+        var shopping_cart = JSON.parse('{shoppingcart}');
+        var sum = document.getElementById("prices");
+        var total = parseFloat(document.getElementById("summe").innerText);
+        for(var i in shopping_cart){
+            $.ajax({
+                url: "api.php?action=product&id="+shopping_cart[i],
+                dataType: 'json',
+                success: function (result) {
+                    var container = document.createElement("div");
+                    var image = document.createElement("img");
+                    image.setAttribute("src", "img/products/"+result.ID+".png");
+                    var label = document.createElement("p");
+                    label.innerText = result.brand+" "+result.name;
+                    var price = document.createElement("p");
+                    price.innerText = result.vk+"€";
+                    var button = document.createElement("button");
+                    button.setAttribute("class", "btn");
+                    button.setAttribute("value", result.ID);
+                    button.setAttribute("onclick", "shopping_delete(this.value);");
+                    button.innerHTML = "<i class='fas fa-times'></i>";
+                    container.appendChild(image);
+                    container.appendChild(label);
+                    container.appendChild(price);
+                    container.appendChild(button);
+                    document.getElementById("products").appendChild(container);
+
+                    var price_sum = document.createElement("p");
+                    price_sum.innerText = result.vk+" €";
+                    sum.appendChild(price_sum);
+
+                    total += parseFloat(result.vk);
+
+                    document.getElementById("summe").innerText = total.toFixed(2);
+                }
+            });
+        }
+    });
+</script>

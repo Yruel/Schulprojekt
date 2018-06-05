@@ -26,8 +26,9 @@
                 Neu hier? <i id="register-link" onclick="showRegister()">Jetzt Registrieren!</i>
             </div>
         </div>
-        {user}
-        <a href="#" style="float: right; display: none"><i class="fas fa-shopping-cart"></i>&ensp;Warenkorb</a>
+        <a id="username_navbar"></a>
+        <a href="index.php?request=logout" onclick="window.location.replace('index.php');" style="float: right; display: none;" id="logout">Logout</a>
+        <a id="shopping_cart" href="index.php?request=shopping_cart" style="float: right; display: none"><i class="fas fa-shopping-cart"></i>&ensp;Warenkorb</a>
     </div>
 </div>
 <script src="classes/js/register.js"></script>
@@ -68,6 +69,11 @@
         var user = "{user}";
         if(user){
             document.getElementById("sign_in").style.display = "none";
+            document.getElementById("shopping_cart").style.display = "block";
+            document.getElementById("username_navbar").style.display = "block";
+            document.getElementById("username_navbar").innerText = "Guten Tag, {salutation} {user}";
+            document.getElementById("logout").style.display = "block";
+
         }
         else {
             console.log("no");

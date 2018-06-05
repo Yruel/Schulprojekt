@@ -50,5 +50,19 @@ $conn = new PDO("mysql:dbname=".DBNAME.";host=".DBHOST.";charset=utf8", DBUSER, 
             $stmt->bindParam(":password", $password);
             $stmt->execute();
             break;
+
+        case "shopping":
+            if(!isset($_SESSION["login"])){
+                return http_response_code(403);
+            }
+
+            $productid = $_GET["productid"];
+            array_push($_SESSION["shopping_cart"], $productid);
+            break;
+
+        case "shopping_delete":
+            $productid = $_GET["productid"];
+            unset($_SESSION["shopping_cart"][array_search($productid, $_SESSION["shopping_cart"])]);
+            break;
     }
 ?>

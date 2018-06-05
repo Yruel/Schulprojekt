@@ -143,6 +143,16 @@ body {
     display: block;
 }
 
+#username_navbar {
+    float: right;
+    color: white;
+    display: none;
+}
+
+#username_navbar:hover {
+    background-color: #333;
+}
+
 /*LOGIN*/ 
 
 .login-container {
