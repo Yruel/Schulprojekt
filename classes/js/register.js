@@ -3,28 +3,28 @@ function register() {
         swal("Bitte Nachnamen Eintragen.", "", "warning");
     }
     else if (document.getElementById("name").value == "") {
-        swal("Bitte Vornamen Eintragen.");
+        swal("Bitte Vornamen Eintragen.", "", "warning");
     }
     else if (document.getElementById("street").value == "") {
-        alert(unescape("Bitte Straße Eintragen."));
+        swal("Bitte Straße Eintragen.", "", "warning");
     }
     else if (document.getElementById("house").value == "") {
-        alert(unescape("Bitte Hausnummer Eintragen."));
+        swal("Bitte Hausnummer Eintragen.", "", "warning");
     }
     else if (document.getElementById("place").value == "") {
-        alert(unescape("Bitte Ort Eintragen."));
+        swal("Bitte Ort Eintragen.", "", "warning");
     }
     else if (document.getElementById("postcode").value == "") {
-        alert(unescape("Bitte Postleitzahl Eintragen."));
+        swal("Bitte Postleitzahl Eintragen.", "", "warning");
     }
     else if (document.getElementById("mail").value == "") {
-        alert(unescape("Bitte e-Mail Adresse Eintragen."));
+        swal("Bitte e-Mail Adresse Eintragen.", "", "warning");
     }
     else if (document.getElementById("password").value == "") {
-        alert(unescape("Bitte Passwort Eintragen."));
+        swal("Bitte Passwort Eintragen.", "", "warning");
     }
     else if (document.getElementById("passwordTwo").value == "") {
-        alert(unescape("Bitte Passwort Eintragen."));
+        swal("Bitte Passwort wiederholen.", "", "warning");
     
     } else {
         var x = document.getElementById("gender");

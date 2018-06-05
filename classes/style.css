@@ -167,7 +167,6 @@ body {
 }
 .btn-primary {
     background-color: #1e4a76 !important;
-    margin-top: 20px !important;
 }
 
 /*Register*/
@@ -175,4 +174,7 @@ body {
 #register-link {
     color: red;
     cursor: pointer;
+}
+.inputRegister {
+    margin-top: 10px;
 }

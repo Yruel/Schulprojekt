@@ -20,7 +20,7 @@
                 <form action="index.php" method="post">
                     <input class="form-control login-input" type="text" name ="mail" placeholder="Email Adresse"/>
                     <input class="form-control login-input" type="password" name="password" placeholder="Passwort"/>
-                    <input class="btn btn-primary" type="submit" value="Anmelden"/>
+                    <input class="btn btn-primary" style="margin-top: 20px;" type="submit" value="Anmelden"/>
                 </form>
                 <hr/>
                 Neu hier? <i id="register-link" onclick="showRegister()">Jetzt Registrieren!</i>
@@ -43,16 +43,16 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <select id="gender"><option>Herr</option><option>Frau</option></select>
-                    <input id="lastname" type="text" class="form-control" placeholder="Name"/>
-                    <input id="name" type="text" class="form-control" placeholder="Vorname"/>
-                    <input id="street" type="text" class="form-control" placeholder="Straße"/>
-                    <input id="house" type="text" class="form-control" placeholder="Haus Nr."/>
-                    <input id="place"type="text" class="form-control" placeholder="Ort"/>
-                    <input id="postcode" type="text" class="form-control" placeholder="Postleitzahl"/>
-                    <input id="mail" type="text" class="form-control" placeholder="e-Mail Adresse"/>
-                    <input id="password" type="password" class="form-control" placeholder="Passwort"/>
-                    <input id="passwordTwo" type="password" class="form-control" placeholder="Passwort wiederholen"/>
+                    <select id="gender" class="form-control"><option>Herr</option><option>Frau</option></select>
+                    <input id="lastname" type="text" class="form-control inputRegister" placeholder="Name"/>
+                    <input id="name" type="text" class="form-control inputRegister" placeholder="Vorname"/>
+                    <input id="street" type="text" class="form-control inputRegister" placeholder="Straße"/>
+                    <input id="house" type="text" class="form-control inputRegister" placeholder="Haus Nr."/>
+                    <input id="place"type="text" class="form-control inputRegister" placeholder="Ort"/>
+                    <input id="postcode" type="text" class="form-control inputRegister" placeholder="Postleitzahl"/>
+                    <input id="mail" type="text" class="form-control inputRegister" placeholder="e-Mail Adresse"/>
+                    <input id="password" type="password" class="form-control inputRegister" placeholder="Passwort"/>
+                    <input id="passwordTwo" type="password" class="form-control inputRegister" placeholder="Passwort wiederholen"/>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

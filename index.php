@@ -114,6 +114,11 @@ switch($action) {
 		$tpl->setBlock("nav", "nav");
 		$tpl->parse("nav", "nav");
 		break;
+
+	case "aboutUs":
+		$tpl->setBlock("nav" , "nav");
+		$tpl->parse("nav", "nav");
+		break;
 }
 $tpl->parse('out','main');
 $tpl->p('out');
