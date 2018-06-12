@@ -74,17 +74,43 @@ switch($action) {
 		break;
 		
 	case "products":
-		$tpl->setBlock("products", "content");
-		$tpl->setBlock("nav", "nav");
-		$tpl->parse("nav", "nav");
-		$tpl->parse("content", "products");
-
 		if (!empty ($_GET["category"])) {
 			$category = $_GET["category"];
 		} else {
 			$category = "sound";
 		}
-		$tpl->setVar("category", $category);
+		switch($category) {
+			case "sound":
+				$tpl->setBlock("products", "content");
+				$tpl->setBlock("nav", "nav");
+				$tpl->parse("nav", "nav");
+				$tpl->parse("content", "products");
+				$tpl->setVar("category", $category);
+				break;
+			
+			case "light": 
+				$tpl->setBlock("products", "content");
+				$tpl->setBlock("nav", "nav");
+				$tpl->parse("nav", "nav");
+				$tpl->parse("content", "products");
+				$tpl->setVar("category", $category);
+				break;
+			
+			case "ambience":
+				$tpl->setBlock("products", "content");
+				$tpl->setBlock("nav", "nav");
+				$tpl->parse("nav", "nav");
+				$tpl->parse("content", "products");
+				$tpl->setVar("category", $category);
+				break;
+			
+			default:
+				$tpl->setBlock("nav", "nav");
+				$tpl->setVar("content", "Kategorie ".$category." nicht gefunden.");
+				$tpl->parse("nav", "nav");
+				break;
+		}
+		
 		break;
 
 	case "shopping_cart":
@@ -132,7 +158,13 @@ switch($action) {
         $tpl->setBlock("nav", "nav");
         $tpl->parse("nav", "nav");
         $tpl->parse("content", "about");
-        break;
+		break;
+	
+	default: 
+		$tpl->setBlock("nav", "nav");
+		$tpl->setVar("content", "Seite nicht gefunden.");
+		$tpl->parse("nav", "nav");
+		break;
 }
 $tpl->parse('out','main');
 $tpl->p('out');
